@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task msnager app</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+
+    <!-- fav icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo/fav-icon.png">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header-area py-6 absolute top-0 left-0 right-0 z-[9]">
+        <div class="container max-w-2lg mx-auto px-4 lg:px-12">
+            <div class="grid grid-cols-12 md:gap-10 items-center">
+                <div class="col-span-4">
+                    <div class="header-logo">
+                        <a href="#"><img src="./assets/img/logo/main-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-span-8">
+                    <div class="header-main-menu">
+                        <nav>
+                            <ul class="flex items-center gap-4 md:gap-8 justify-end">
+                                <li>
+                                    <a href="#" class="text-lg font-normal text-gray-500 custom__border block">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-lg font-normal text-gray-500 custom__border block">Join</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-lg font-normal text-gray-500 custom__border block">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main class="relative z-[1]">
+        <!-- big shape -->
+        <img class="absolute top-[25%] left-1/2 -translate-x-1/2 z-[-1]" src="./assets/img/icons/big-shape-01.svg" alt="">
+
+        <!-- hero start -->
+        <section
+            class="hero-area bg-[url('./assets/img/bg/hero-bg.jpg')] bg-cover bg-center bg-no-repeat relative pt-[145px] pb-[80px] mb-65">
+            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="hero-content h-full flex justify-center flex-col">
+                            <h1 class="text-[56px] font-semibold text-primary leading-[1.4] mb-6">
+                                Scan Here to Get
+                                <span class="block text-black">Your Tenant App Login</span>
+                            </h1>
+                            <p class="text-lg light">
+                                A Modern Task Management Platform Designed to Help Teams Plan, <br> Collaborate, and
+                                Complete Tasks Faster—without Confusion.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-5">
+                        <div class="qr-code">
+                            <a href="#"
+                                class="rounded-2xl p-8 bg-white shadow-[0_-2px_40px_0_rgba(187,155,255,0.15),0_-2px_10px_0_rgba(233,223,255,0.3),inset_0_1px_0_0_rgba(255,255,255,0.5)] block transition duration-300 hover:scale-[1.03] ">
+                                <img class="rounded-2xl border border-gray-200" src="./assets/img/hero-img/qr-code.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- hero start -->
+
+        <!-- task-progress start -->
+        <section class="task-progress-area mb-65">
+            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
+                <div class="grid grid-cols-12 gap-4 md:gap-10">
+                    <div class="col-span-12 md:col-span-5">
+                        <div class="task-progress-img">
+                            <img class="rounded-2xl h-[250px] w-full object-cover md:h-full"
+                                src="./assets/img/img-wrapper/img-wrapper-01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="task-progress-content h-full flex justify-center flex-col">
+                            <h2 class="text-[56px] font-medium text-black leading-[1.4] mb-6">
+                                Organize Work Track
+                                <span class="block text-primary">Progress Get More Done</span>
+                            </h2>
+                            <p class="text-lg light mb-4 md:mb-8">
+                                A Modern Task Management Platform Designed to Help Teams Plan, <br> Collaborate, and
+                                Complete
+                                Tasks Faster—without Confusion.
+                            </p>
+                            <div class="task-progress-btn">
+                                <a href="#"
+                                    class="bg-primary text-white h-[56px] flex items-center justify-center w-[200px] rounded-[12px] text-base font-semibold border border-primary transition duration-300 hover:bg-white hover:text-primary">
+                                    Join Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- task-progress end -->
+
+        <!-- Get Started start -->
+        <section class="get-started-area mb-65 h-[628px] relative overflow-hidden">
+            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
+                <div class="grid grid-cols-12 gap-4 md:md:gap-10">
+                    <div class="col-span-12 md:col-span-7">
+                        <div class="get-started-content pt-[240px] h-full flex justify-center flex-col">
+                            <h2 class="text-[48px] font-semibold text-primary leading-[1.4] mb-4">
+                                Get the App & Join
+                                <span class="block text-black">Your Workspace Instantly</span>
+                            </h2>
+                            <p class="text-lg light mb-6">
+                                Use your mobile device to scan this QR code and access your assigned <br>workspace
+                                securely.
+                            </p>
+                            <div class="download-btn flex items-center gap-[10px]">
+                                <a href="#"
+                                    class="h-12 bg-black rounded-[8px] px-3 flex items-center justify-center hover:bg-info transition duration-300">
+                                    <img src="./assets/img/icons/play-store.svg" alt="">
+                                </a>
+                                <a href="#"
+                                    class="h-12 bg-black rounded-[8px] px-3 flex items-center justify-center hover:bg-info transition duration-300">
+                                    <img src="./assets/img/icons/app-store.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-5 flex justify-center">
+                        <div
+                            class="mobile-bg bg-white md:absolute bottom-[-400px] shadow-[0_-2px_40px_0_rgba(187,155,255,0.15),0_-2px_10px_0_rgba(233,223,255,0.3),inset_0_1px_0_0_rgba(255,255,255,0.5)] p-8 rounded-[16px]">
+                            <div class="mobile-mask-img transition duration-300 relative">
+                                <a href="javascript:void(0)" class="mobile-img relative">
+                                    <img src="./assets/img/phone/phone.png" alt="">
+                                    <img src="./assets/img/phone/phone-screen.png" alt="App screen"
+                                        class="absolute phone-screen">
+                                </a>
+                                <a href="#"
+                                    class="absolute download-app text-white font-bold text-3xl w-full text-center download-text">
+                                    Download on the App
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Get Started end -->
+
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="footer-area bg-black pt-[64px]">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-4 md:gap-10">
+                <div class="col-span-12 md:col-span-5">
+                    <div class="footer-left-content">
+                        <div class="footer-logo mb-8">
+                            <a href="#">
+                                <img src="./assets/img/logo/logo-white.png" alt="">
+                            </a>
+                        </div>
+                        <p class="text-lg font-normal text-[#B9B3B3] leading-[140%] mb-6">
+                            Data analysis software is a type of software tool used for data analysis and reporting.
+                        </p>
+                        <div class="download-btn flex items-center gap-[10px] mb-6">
+                            <a href="#"
+                                class="!h-12 border-rotate-box-2 relative !rounded-[8px] px-3 flex items-center justify-center z-[1]">
+                                <img src="./assets/img/icons/play-store.svg" alt="">
+                            </a>
+                            <a href="#"
+                                class="!h-12 border-rotate-box-2 relative !rounded-[8px] px-3 flex items-center justify-center z-[1]">
+                                <img src="./assets/img/icons/app-store.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="social-area">
+                            <div class="social-icons text-white flex items-center gap-3">
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full bg-[rgba(255,255,255,0.08)] flex items-center justify-center transition duration-300 hover:bg-primary">
+                                    <i class="fa-brands fa-facebook-f text-white"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full bg-[rgba(255,255,255,0.08)] flex items-center justify-center transition duration-300 hover:bg-primary">
+                                    <i class="fa-brands fa-instagram text-white"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-9 h-9 rounded-full bg-[rgba(255,255,255,0.08)] flex items-center justify-center transition duration-300 hover:bg-primary">
+                                    <i class="fa-brands fa-github text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-2">
+                    <div class="footer-wigat ml-[92px]">
+                        <h4 class="footer-wigat-title text-xl font-normal text-[#fafafa] mb-8">
+                            Company
+                        </h4>
+                        <div class="footer-wigat-list">
+                            <ul>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Service
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Resources
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-start-8 xl:col-start-9 md:col-span-3 xl:col-span-2">
+                    <div class="footer-wigat">
+                        <h4 class="footer-wigat-title text-xl font-normal text-[#fafafa] mb-8">
+                            Help
+                        </h4>
+                        <div class="footer-wigat-list">
+                            <ul>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Customer Support
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Terms & Conditions
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-2">
+                    <div class="footer-wigat ml-[70px]">
+                        <h4 class="footer-wigat-title text-xl font-normal text-[#fafafa] mb-8">
+                            More
+                        </h4>
+                        <div class="footer-wigat-list">
+                            <ul>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Features
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Documentation
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        License
+                                    </a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="#" class="text-base font-light text-[#b9b3b3] custom__border ">
+                                        Changelog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b mt-4 border-b-gray-800"></div>
+            <div class="footer-copy-right-area">
+                <p class="text-sm font-normal text-[rgba(255,255,255,0.5)] text-center py-8">
+                    © Copyright 2026, All Rights Reserved by
+                    <a href="#" class="text-primary custom__border">Supraskills</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>
