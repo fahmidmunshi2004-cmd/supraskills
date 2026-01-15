@@ -23,17 +23,63 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/scrool-to-top.css">
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-[#050505] text-white">
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+
     <!-- header start -->
-    <header class="header-area py-6 absolute top-0 left-0 right-0 z-[9]">
-        <div class="container max-w-2lg mx-auto px-4 lg:px-12">
+    <header data-aos="fade-down" data-aos-duration="1200" class="header-area py-6 absolute top-0 left-0 right-0 z-[9]">
+        <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12 md:gap-10 items-center">
                 <div class="col-span-4">
                     <div class="header-logo">
-                        <a href="#"><img src="./assets/img/logo/main-logo.png" alt=""></a>
+                        <a href="#"><img src="./assets/img/logo/logo-white.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-span-8">
@@ -41,14 +87,14 @@
                         <nav>
                             <ul class="flex items-center gap-4 md:gap-8 justify-end">
                                 <li>
-                                    <a href="index-2.html" class="text-lg font-normal text-gray-500 custom__border block">Home</a>
+                                    <a href="#" class="text-lg font-normal text-gray-300 custom__border block">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-lg font-normal text-gray-500 custom__border block">Join</a>
+                                    <a href="#" class="text-lg font-normal text-gray-300 custom__border block">Join</a>
                                 </li>
                                 <li>
                                     <a href="#"
-                                        class="text-lg font-normal text-gray-500 custom__border block">Contact</a>
+                                        class="text-lg font-normal text-gray-300 custom__border block">Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -60,127 +106,351 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main class="relative z-[1]">
-        <!-- big shape -->
-        <img class="absolute top-[25%] left-1/2 -translate-x-1/2 z-[-1]" src="./assets/img/icons/big-shape-01.svg" alt="">
 
-        <!-- hero start -->
-        <section
-            class="hero-area bg-[url('./assets/img/bg/hero-bg.jpg')] bg-cover bg-center bg-no-repeat relative pt-[145px] pb-[80px] mb-65">
-            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
-                <div class="grid grid-cols-12 gap-4">
-                    <div class="col-span-12 md:col-span-7">
-                        <div class="hero-content h-full flex justify-center flex-col">
-                            <h1 class="text-[56px] font-semibold text-primary leading-[1.4] mb-6">
-                                Scan Here to Get
-                                <span class="block text-black">Your Tenant App Login</span>
-                            </h1>
-                            <p class="text-lg light">
-                                A Modern Task Management Platform Designed to Help Teams Plan, <br> Collaborate, and
-                                Complete Tasks Faster—without Confusion.
+    <!-- hero start -->
+    <section
+        class="hero-area bg-[url('./assets/img/bg/hero-bg-2.jpg')] bg-cover bg-center bg-no-repeat relative pt-[145px] pb-[65px] mb-65">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-4">
+                <div data-aos="fade-right" data-aos-duration="1200"
+                    class="col-span-12 md:col-span-7 order-2 md:order-1">
+                    <div class="hero-content h-full flex justify-center flex-col">
+                        <h3 class="text-2xl font-normal text-[rgba(255,255,255,0.6)] mb-4">
+                            Fast login—no credentials needed
+                        </h3>
+                        <h1 class="text-[56px] font-semibold text-white leading-[1.4] mb-6">
+                            <span class="block text-primary inline">Organize</span>
+                            Work Track <br class="hidden md:block"> Progress Get More
+                            <span class="block text-primary inline">Done</span>
+                        </h1>
+                        <p class="text-lg light text-white">
+                            A Modern Task Management Platform Designed to Help Teams Plan, <br> Collaborate, and
+                            Complete Tasks Faster—without Confusion.
+                        </p>
+                        <div class="hero-btn task-progress-btn mt-8">
+                            <a href="#"
+                                class="bg-primary text-white h-[56px] flex items-center justify-center w-[200px] rounded-[12px] text-base font-semibold border border-primary transition duration-300 hover:bg-transparent hover:text-primary">
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200"
+                    class="col-span-12 md:col-span-5 order-1 md:order-2">
+                    <div class="hero-img position relative overflow-hidden rounded-full">
+                        <span></span>
+                        <img class="rounded-full" src="./assets/img/hero-img/hero-02.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero start -->
+
+    <!-- feature start -->
+    <section class="feature-area mb-65">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div data-aos="fade-right" data-aos-duration="1200" class="section-title  mb-10 text-center xl:text-start">
+                <h3 class="text-[56px] font-medium mb-2">
+                    Core Features
+                </h3>
+                <p class="text-xl font-normal text-[rgba(255,255,255,0.6)] leading-[140%]">
+                    A Modern Task Management Platform Designed to Help Teams Plan, Collaborate, and Complete <br> Tasks
+                    Faster—without Confusion.
+                </p>
+            </div>
+            <div class="grid grid-cols-12 gap-4 md:gap-6">
+                <!-- top -->
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-8">
+                    <div
+                        class="border-rotate-box p-6 rounded-xl bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)]">
+                        <div class="grid row-span-12 xl:grid-cols-12 gap-4 xl:gap-6 h-full">
+                            <div class="row-span-6 xl:col-span-6">
+                                <div class="feature-img overflow-hidden cursor-pointer h-full">
+                                    <img class="rounded-[8px] w-full h-full object-cover"
+                                        src="./assets/img/core-features/features-01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="row-span-6 xl:col-span-6">
+                                <div class="feature-content flex flex-col justify-center gap-2 xl:gap-4 h-full">
+                                    <h4 class="font-medium text-lg xl:text-2xl leading-[133%]">
+                                        Teneant wise Task Management & Grouping
+                                    </h4>
+                                    <p class="text-base font-light text-[rgba(255,255,255,0.6)]">
+                                        Organize tasks by tenant, team, or department with complete separation and
+                                        clarity. Manage multiple workspaces effortlessly while keeping data secure and
+                                        structured for every organization.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-4">
+                    <div
+                        class="border-rotate-box p-6 rounded-xl bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)]">
+                        <div class="grid grid-row-12 gap-4 xl:gap-6">
+                            <div class="row-span-6">
+                                <div class="feature-img overflow-hidden cursor-pointer h-full">
+                                    <img class="rounded-[8px] w-full h-full object-cover"
+                                        src="./assets/img/core-features/features-02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="row-span-6">
+                                <div class="feature-content flex flex-col justify-center gap-2 xl:gap-4 h-full">
+                                    <h4 class="font-medium text-lg xl:text-2xl leading-[133%]">
+                                        HRM (Human Resources)
+                                    </h4>
+                                    <p class="text-base font-light text-[rgba(255,255,255,0.6)]">
+                                        Streamline HR-related tasks such as employee assignments, approvals, and
+                                        internal workflows. Keep your workforce aligned with clear responsibilities and
+                                        transparent task tracking.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bottom -->
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-4">
+                    <div
+                        class="border-rotate-box p-6 rounded-xl bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)]">
+                        <div class="grid grid-row-12 gap-4 xl:gap-6">
+                            <div class="row-span-6">
+                                <div class="feature-img overflow-hidden cursor-pointer h-full">
+                                    <img class="rounded-[8px] w-full h-full object-cover"
+                                        src="./assets/img/core-features/features-03.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="row-span-6">
+                                <div class="feature-content flex flex-col justify-center gap-2 xl:gap-4 h-full">
+                                    <h4 class="font-medium text-lg xl:text-2xl leading-[133%]">
+                                        Accounts & Finance
+                                    </h4>
+                                    <p class="text-base font-light text-[rgba(255,255,255,0.6)]">
+                                        Manage financial and accounting-related tasks with precision. Track approvals,
+                                        recurring work, and deadlines to ensure smooth financial operations without
+                                        delays or confusion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-8">
+                    <div
+                        class="border-rotate-box p-6 rounded-xl bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)]">
+                        <div class="grid row-span-12 xl:grid-cols-12 gap-4 xl:gap-6 h-full">
+                            <div class="row-span-6 xl:col-span-6">
+                                <div class="feature-img overflow-hidden cursor-pointer h-full">
+                                    <img class="rounded-[8px] w-full h-full object-cover"
+                                        src="./assets/img/core-features/features-04.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="row-span-6 xl:col-span-6">
+                                <div class="feature-content flex flex-col justify-center gap-2 xl:gap-4 h-full">
+                                    <h4 class="font-medium text-lg xl:text-2xl leading-[133%]">
+                                        Mobile Apps (Android & iOS)
+                                    </h4>
+                                    <p class="text-base font-light text-[rgba(255,255,255,0.6)]">
+                                        Stay connected on the go with our fully featured mobile apps. Access tasks,
+                                        receive notifications, collaborate with teams, and log in instantly using secure
+                                        tenant-based access.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- feature end -->
+
+    <!-- step area start -->
+    <section class="step-area mb-65">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div data-aos="fade-right" data-aos-duration="1200" class="section-title text-center xl:text-start mb-10">
+                <h3 class="text-[56px] font-medium mb-2">
+                    How It Works
+                </h3>
+                <p class="text-xl font-normal text-[rgba(255,255,255,0.6)] leading-[140%]">
+                    A Modern Task Management Platform Designed to Help Teams Plan, Collaborate, and Complete <br> Tasks
+                    Faster—without Confusion.
+                </p>
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-3">
+                    <div
+                        class="border-rotate-box  bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)] p-4">
+                        <div class="step-content flex flex-col justify-between gap-2 lg:gap-4">
+                            <h3
+                                class="text-[60px] md:text-[100px] text-center font-bold stroke-text gradient-text font-poppins relative">
+                                01
+                            </h3>
+                            <h4 class="text-base text-center md:text-start font-medium">
+                                Create Your Tenant Workspace
+                            </h4>
+                            <p class="text-sm font-light text-center md:text-start text-[rgba(255,255,255,0.6)]">
+                                Streamline HR-related tasks such as employee assignments, approvals, and internal
+                                workflows. Keep your workforce aligned with clear responsibilities
                             </p>
                         </div>
                     </div>
-                    <div class="col-span-12 md:col-span-5">
-                        <div class="qr-code">
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-3">
+                    <div
+                        class="border-rotate-box  bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)] p-4">
+                        <div class="step-content flex flex-col justify-between gap-2 lg:gap-4">
+                            <h3
+                                class="text-[60px] md:text-[100px] text-center font-bold stroke-text gradient-text font-poppins relative">
+                                02
+                            </h3>
+                            <h4 class="text-base text-center md:text-start font-medium">
+                                Invite Teams & Assign Roles
+                            </h4>
+                            <p class="text-sm font-light text-center md:text-start text-[rgba(255,255,255,0.6)]">
+                                Add team members and define roles for HR, Accounts, or operations. Control access and
+                                responsibilities with role-based permissions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-3">
+                    <div
+                        class="border-rotate-box  bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)] p-4">
+                        <div class="step-content flex flex-col justify-between gap-2 lg:gap-4">
+                            <h3
+                                class="text-[60px] md:text-[100px] text-center font-bold stroke-text gradient-text font-poppins relative">
+                                03
+                            </h3>
+                            <h4 class="text-base text-center md:text-start font-medium">
+                                Create, Group & Track Tasks
+                            </h4>
+                            <p class="text-sm font-light text-center md:text-start text-[rgba(255,255,255,0.6)]">
+                                Organize tasks by projects, departments, or workflows. Assign owners, set priorities,
+                                and track progress in real time across teams.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6 xl:col-span-3">
+                    <div
+                        class="border-rotate-box  bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(165,118,248,0.08)_100%)] p-4">
+                        <div class="step-content flex flex-col justify-between gap-2 lg:gap-4">
+                            <h3
+                                class="text-[60px] md:text-[100px] text-center font-bold stroke-text gradient-text font-poppins relative">
+                                04
+                            </h3>
+                            <h4 class="text-base text-center md:text-start font-medium">
+                                Collaborate & Stay Updated
+                            </h4>
+                            <p class="text-sm font-light text-center md:text-start text-[rgba(255,255,255,0.6)]">
+                                Communicate through built-in chat, receive instant notifications, and manage tasks
+                                seamlessly from web or mobile apps.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- step end -->
+
+    <!-- Access Control start -->
+    <section class="access-control-area mb-65">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12 gap-4 md:gap-10">
+                <div data-aos="zoom-in-up" data-aos-duration="1000"
+                    class="col-span-12 lg:col-span-5 xl:col-span-6 order-2 md:order-1">
+                    <div class="access-control-img relative rounded-[16px] overflow-hidden cursor-pointer">
+                        <img class="rounded-[16px]" src="./assets/img/access-control/access-control-01.jpg" alt="">
+                        <span
+                            class="absolute view-text !w-[100px] h-[100px] flex items-center justify-center top-0 text-[25px] relative transition duration-300 w-full text-center font-bold text-white z-[1] ">
+                            <a href="./assets/img/access-control/access-control-01.jpg"
+                                class="w-full h-full flex items-center justify-center popup-img">
+                                View
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-7 xl:col-span-6 order-1 md:order-2">
+                    <div data-aos="fade-right" data-aos-duration="1200"
+                        class="section-title text-center md:text-start h-full flex flex-col justify-center">
+                        <h3 class="text-[56px] font-normal mb-4 leading-[114%]">
+                            Role-Based <br>
+                            <span class="text-primary">
+                                Access Control
+                            </span>
+                        </h3>
+                        <p class="text-xl font-normal text-[rgba(255,255,255,0.6)] leading-[140%]">
+                            Assign permissions based on roles to ensure the right people access the right tasks.
+                            Maintain security and accountability across teams and departments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Access Control end -->
+
+    <!-- Get Started start -->
+    <section class="get-started-area mb-65">
+        <div class="container max-w-2lg mx-auto px-4">
+            <div class="grid grid-cols-12">
+                <div data-aos="fade-right" data-aos-duration="1200" class="col-span-12 md:col-span-6">
+                    <div class="section-title text-center md:text-start h-full flex flex-col justify-center">
+                        <h3 class="text-[56px] font-normal mb-4 leading-[114%]">
+                            Get the App & Join
+                            <span class="text-primary block">
+                                Your Workspace
+                            </span>
+                            Instantly
+                        </h3>
+                        <p class="text-lg font-normal text-[rgba(255,255,255,0.6)] leading-[140%] mb-6">
+                            Use your mobile device to scan this QR code and access your assigned workspace securely.
+                        </p>
+                        <div class="download-btn flex items-center justify-center md:justify-start gap-[10px]">
                             <a href="#"
-                                class="rounded-2xl p-8 bg-white shadow-[0_-2px_40px_0_rgba(187,155,255,0.15),0_-2px_10px_0_rgba(233,223,255,0.3),inset_0_1px_0_0_rgba(255,255,255,0.5)] block transition duration-300 hover:scale-[1.03] ">
-                                <img class="rounded-2xl border border-gray-200" src="./assets/img/hero-img/qr-code.jpg"
-                                    alt="">
+                                class="!h-12 border-rotate-box-2 relative !rounded-[8px] px-3 flex items-center justify-center z-[1]">
+                                <img src="./assets/img/icons/play-store.svg" alt="">
+                            </a>
+                            <a href="#"
+                                class="!h-12 border-rotate-box-2 relative !rounded-[8px] px-3 flex items-center justify-center z-[1]">
+                                <img src="./assets/img/icons/app-store.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="col-span-12 md:col-span-6">
+                    <div
+                        class="mobile-bg w-[300px] mx-auto bg-custom-gradient p-8 rounded-[56px] pb-0 flex items-center justify-center max-h-[500px] h-[300px] md:h-full mt-6 md:mt-0 md:w-max overflow-hidden">
+                        <div class="mobile-mask-img mobile-mask-img-2 w-max transition duration-300 relative">
+                            <a href="javascript:void(0)" class="mobile-img relative block w-max">
+                                <img class="transform translate-y-[23%]" src="./assets/img/phone/phone.png" alt="">
+                                <img src="./assets/img/phone/phone-screen.png" alt="App screen"
+                                    class="absolute phone-screen phone-screen-2">
+                            </a>
+                            <a href="#"
+                                class="absolute download-app text-white font-bold text-3xl w-full text-center download-text">
+                                Download on the App
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- hero start -->
+        </div>
+    </section>
+    <!-- Get Started end -->
 
-        <!-- task-progress start -->
-        <section class="task-progress-area mb-65">
-            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
-                <div class="grid grid-cols-12 gap-4 md:gap-10">
-                    <div class="col-span-12 md:col-span-5">
-                        <div class="task-progress-img">
-                            <img class="rounded-2xl h-[250px] w-full object-cover md:h-full"
-                                src="./assets/img/img-wrapper/img-wrapper-01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-7">
-                        <div class="task-progress-content h-full flex justify-center flex-col">
-                            <h2 class="text-[56px] font-medium text-black leading-[1.4] mb-6">
-                                Organize Work Track
-                                <span class="block text-primary">Progress Get More Done</span>
-                            </h2>
-                            <p class="text-lg light mb-4 md:mb-8">
-                                A Modern Task Management Platform Designed to Help Teams Plan, <br> Collaborate, and
-                                Complete
-                                Tasks Faster—without Confusion.
-                            </p>
-                            <div class="task-progress-btn">
-                                <a href="#"
-                                    class="bg-primary text-white h-[56px] flex items-center justify-center w-[200px] rounded-[12px] text-base font-semibold border border-primary transition duration-300 hover:bg-white hover:text-primary">
-                                    Join Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- task-progress end -->
-
-        <!-- Get Started start -->
-        <section class="get-started-area mb-65 h-[628px] relative overflow-hidden">
-            <div class="container max-w-2lg mx-auto px-4 lg:px-12">
-                <div class="grid grid-cols-12 gap-4 md:md:gap-10">
-                    <div class="col-span-12 md:col-span-7">
-                        <div class="get-started-content pt-[240px] h-full flex justify-center flex-col">
-                            <h2 class="text-[48px] font-semibold text-primary leading-[1.4] mb-4">
-                                Get the App & Join
-                                <span class="block text-black">Your Workspace Instantly</span>
-                            </h2>
-                            <p class="text-lg light mb-6">
-                                Use your mobile device to scan this QR code and access your assigned <br>workspace
-                                securely.
-                            </p>
-                            <div class="download-btn flex items-center gap-[10px]">
-                                <a href="#"
-                                    class="h-12 bg-black rounded-[8px] px-3 flex items-center justify-center hover:bg-info transition duration-300">
-                                    <img src="./assets/img/icons/play-store.svg" alt="">
-                                </a>
-                                <a href="#"
-                                    class="h-12 bg-black rounded-[8px] px-3 flex items-center justify-center hover:bg-info transition duration-300">
-                                    <img src="./assets/img/icons/app-store.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-5 flex justify-center">
-                        <div
-                            class="mobile-bg bg-white md:absolute bottom-[-400px] shadow-[0_-2px_40px_0_rgba(187,155,255,0.15),0_-2px_10px_0_rgba(233,223,255,0.3),inset_0_1px_0_0_rgba(255,255,255,0.5)] p-8 rounded-[16px]">
-                            <div class="mobile-mask-img transition duration-300 relative">
-                                <a href="javascript:void(0)" class="mobile-img relative">
-                                    <img src="./assets/img/phone/phone.png" alt="">
-                                    <img src="./assets/img/phone/phone-screen.png" alt="App screen"
-                                        class="absolute phone-screen">
-                                </a>
-                                <a href="#"
-                                    class="absolute download-app text-white font-bold text-3xl w-full text-center download-text">
-                                    Download on the App
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Get Started end -->
-
-    </main>
     <!-- main end -->
 
     <!-- footer start -->
-    <footer class="footer-area bg-black pt-[64px]">
+    <footer data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500"
+        data-aos-anchor-placement="top-bottom" class="footer-area bg-[#1a1a1a75] pt-[64px]">
         <div class="container max-w-2lg mx-auto px-4">
             <div class="grid grid-cols-12 gap-4 md:gap-10">
                 <div class="col-span-12 md:col-span-5">
@@ -325,6 +595,31 @@
         </div>
     </footer>
     <!-- footer end -->
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/scrool-to-top.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- ios JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- //======= popup =========// -->
+    <script>
+        const lightbox = GLightbox({
+            selector: '.popup-img',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+            openEffect: 'zoom',
+            closeEffect: 'fade'
+        });
+    </script>
+
+    <!-- //======= ios =========// -->
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
